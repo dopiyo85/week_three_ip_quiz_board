@@ -70,7 +70,9 @@
 
   body {
     background-image: url('/images/background4.jpg');
-    background-image: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center
     width: 1000px
     height: 1000px
   
