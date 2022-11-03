@@ -8,7 +8,7 @@
 
 This project is my week three independent project 1. You will be able to choose the correct answer from the available questions and submit to be able to get your score.
 
- <img src="images/download" width="500px" height="300px">
+ <img src="images/download.jpg" width="500px" height="300px">
 
 
 ## BDD
