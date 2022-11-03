@@ -92,13 +92,15 @@
 .card-deck{
   padding-bottom: 20px;
   font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+  font-family:serif;
+  font-size: 20px;
 }
 .footer-copyright{
   color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
 }
 .footer-copyright a{
 color: rgb(255, 255, 255);;
@@ -114,18 +116,15 @@ font-weight: 600;
   text-decoration: none;
 }
 .form-group{
-  color: rgb(255, 255, 255);
+  color: rgb(6, 6, 6);
   font-weight: 600;
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .form-check-label{
-  color: rgb(255, 255, 255);
+  color: rgb(16, 16, 16);
 }
-input[type="radio"] {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
+
 @media only screen and (max-width: 600px){
   .overlay{
     margin-left: 1%;
@@ -139,7 +138,7 @@ input[type="radio"] {
   } 
 }
 .page-footer{
-  background-color: rgb(0,0,0,0.8); 
+  background-color: rgba(42, 188, 214, 0.8); 
   width: 100%;
 }
 .overlay{
@@ -151,7 +150,7 @@ input[type="radio"] {
   border-radius: 10px;
 }
 .button {
-    background-color: #0c0d0c; /* Green */
+    background-color: #0c0d0c; 
     border: none;
     color: white;
     padding: 15px 32px;
