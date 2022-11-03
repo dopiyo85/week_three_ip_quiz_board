@@ -8,6 +8,9 @@
   .jumbotron h1,
   .jumbotron .h1 {
     color: inherit;
+    color: #e4c5c5;
+    font-family:monospace;
+    
   }
   .jumbotron p {
     margin-bottom: 15px;
@@ -70,6 +73,7 @@
     background-image: no-repeat;
     width: 100%;
     height: 100%;
+  
   }
   h2 {
     font-family: fantasy;
