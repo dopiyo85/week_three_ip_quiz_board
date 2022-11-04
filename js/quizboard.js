@@ -15,5 +15,30 @@ quizAnswers.forEach(function (jibu) {
 });
 submitAnswer.addEventListener("click", function (event) {
     let score = (marks/total)*100;
-    alert("your score is " + score + "%");
-});
+    if (event.target.submitAnswer == score &&
+    !event.target.hasAttribute("target"))
+{
+event.target.setAttribute("target", "_blank");
+}
+    //   alert("your score is " + score + "%");   
+}); 
+
+// function grader(){
+//     var grades = score;
+//       if(grades >= 80 && grades <=100 ){
+//           alert("Your grade is A");
+//           }else if(grades >=60 && grades <=79){
+//           alert("Your grade is B");
+//           } 
+//            else if(grades >=40 && grades <=59){
+//           alert("Your grade is C");
+//           }
+//   else if(grades >=20 && grades <=39){
+//           alert("Your grade is D");
+//           } 
+//           else if(grades >=0 && grades <=20){
+//           alert("Your grade is E");
+//           }  
+// }   
+// grader();
+      

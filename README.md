@@ -18,7 +18,7 @@ This project is my week three independent project 1. You will be able to choose 
 
 * From the answers that you choose, you should be able to get your score.
 
-**Expected output is *Your Score is 90. *** 
+**Expected output is *Your Score is 100%. *** 
 
 
 ## Setup/Installation Requirements
