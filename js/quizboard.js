@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const quizAnswers = document.querySelectorAll(".ouranswers");
     const submitAnswer = document.querySelector("#submit_ans");
+    const finalAnsPage = document.querySelector("#finalscore");
     let marks = 0;
     let total = 0;
     quizAnswers.forEach(function (correctans) {
@@ -19,15 +20,21 @@ $(document).ready(function () {
             }
         })
     });
-    submitAnswer.addEventListener("click", function (event) {
+    submitAnswer.addEventListener("click", function(event) {
         let score = (marks / total) * 100;
-        //     if (event.target.submitAnswer == score &&
-        //     !event.target.hasAttribute("target"))
-        // {
-        // event.target.setAttribute("target", "_blank");
-        // }
-        alert("your score is " + score + "%");
+        let level = "";
+        if (score > 80){
+            level += "Excellent";
+        }
+        else if(score >= 50 && score >= 80 ){
+            level += "You can do better";
+        }
+        else{
+            level += "\n You can do better, Please retake test.";
+        }
+        finalAnsPage.textContent = ("You have scored: " + score +"%"+ level);      
     });
+    
     $("#submit_ans").click(function () {
         alert("Wait for your Score");
     });
@@ -41,28 +48,4 @@ $(document).ready(function () {
 
     });
 });
-
-
-// $(window).reload(function(event){
-//     $("body").css("background-image","images/background2.jpg")
-// });
-
-// function grader(){
-//     var grades = score;
-//       if(grades >= 80 && grades <=100 ){
-//           alert("Your grade is A");
-//           }else if(grades >=60 && grades <=79){
-//           alert("Your grade is B");
-//           }
-//            else if(grades >=40 && grades <=59){
-//           alert("Your grade is C");
-//           }
-//   else if(grades >=20 && grades <=39){
-//           alert("Your grade is D");
-//           }
-//           else if(grades >=0 && grades <=20){
-//           alert("Your grade is E");
-//           }
-// }
-// grader();
 
