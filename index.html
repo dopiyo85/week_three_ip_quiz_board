@@ -23,11 +23,17 @@
       </div>
       <div class="container">
         <div class="form-group">
-        <form name="quiz_board" action="answer.html" id="quiz_one" target="_blank">
+        <form name="quiz_board" action="" id="quiz_one">
           <h2>Diana's Coding School: Quiz One</h2>
-          <P>Select the correct answer according to your knowledge and get your score on submission.</P>
-          <p>Good luck!</p>
           <br>
+          <div class="container">
+            <div class="card text-center outline-light mb-3">
+              <div class="card-body text-primary">
+                <h5 class="card-title outline-light">Select all correct answers and click on Submit Button to view your Scores</h5>
+                <p class="card-text" id="score">Good luck!</p>
+              </div>
+            </div>
+      </div>
            <p id="p1">1. How do you create a folder on the terminal? </p>
            <input class="form-check-input ouranswers" type="radio" name="ansOne" id="ans_one_a" value="2">
            <label class="form-check-label" for="ans_one_a"> mkdir </label> <br>
@@ -64,22 +70,21 @@
            <input class="form-check-input ouranswers" type="radio" name="ansFive" id="ans_five_c" value="0">
            <label class="form-check-label" for="ans_five_c"> dont know  </label> <br>
            <br>
-           <input type="submit" id="submit_ans">
-          </div>
+        <div class="container text-left my-3">
+           <button type="button" class="btn btn-outline-primary btn-lg"  id="submit_ans">Submit</button>
+        </div>
+       </div>   
       </div>
         <br>
-      <div class="card-deck">
-        <div class="card ">
-          <div class="card-body text-center">
-            <p class="card-text"> Click on Submit Button to view your Scores <br>
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-globe fa-stack-1x" style="color:rgb(248, 249, 250)"></i>
-                </span>
-            </p>
+      <div class="container d-none" id="finalscore">
+        <div class="card text-center outline-light mb-3">
+          <div class="card-body text-primary">
+            <h5 class="card-title outline-light">Congratulations on taking the quiz</h5>
+            <p class="card-text" id="matokeo"></p>
           </div>
-        </div>     
-    </div>
-
+        </div>
+  </div>
+</div>
     <footer class="page-footer" style="color:rgb(252, 252, 252); font-size: large; font-style: italic;">
       <div class="footer-copyright text-center py-3">Copyright © Nov 2022:
         <a href="https://github.com/dopiyo

@@ -1,40 +1,36 @@
 $(document).ready(function () {
     const quizAnswers = document.querySelectorAll(".ouranswers");
     const submitAnswer = document.querySelector("#submit_ans");
-    const finalAnsPage = document.querySelector("#finalscore");
+    const finalAnsContainer = document.querySelector("#matokeo");
     let marks = 0;
     let total = 0;
     quizAnswers.forEach(function (correctans) {
-        if (parseInt(correctans.value) > 0) {
-            total += parseInt(correctans.value);
+        total += parseInt(correctans.value);
+    });
+    submit_ans.addEventListener("click", function (e) {
+        quizAnswers.forEach(function (answer) {
+            if (answer.checked) {
+                score += parseInt(answer.value);
+            }
+        });
+        let score = (marks / total) * 100;
+        let rating = "";
+        if (score >= 80) {
+            rating += "You have scored: " + score + "%" + " :Excellent";
+        }
+        else if (score >= 50 && score < 80) {
+            rating +="You have scored: " + score + "%" + " :You can do better";
         }
         else {
-            total = total;
+            rating +="You have scored: " + score + "%" +  "\n You can do better, Please retake test.";
         }
-        // correctans.addEventListener("change", function (event) {
-        //     marks += parseInt(event.target.value);
-        // });
-        quizAnswers.forEach(function(correctans) {
-            if(correctans.checked){
-                marks += parseInt(correctans.value);
-            }
-        })
+        finalAnsContainer.innerHTML += rating;
+        
     });
-    submitAnswer.addEventListener("click", function(event) {
-        let score = (marks / total) * 100;
-        let level = "";
-        if (score > 80){
-            level += "Excellent";
-        }
-        else if(score >= 50 && score >= 80 ){
-            level += "You can do better";
-        }
-        else{
-            level += "\n You can do better, Please retake test.";
-        }
-        finalAnsPage.textContent = ("You have scored: " + score +"%"+ level);      
+    $("#submit_ans").click(function(){
+        $("#finalscore").removeClass("d-none");
     });
-    
+ 
     $("#submit_ans").click(function () {
         alert("Wait for your Score");
     });
