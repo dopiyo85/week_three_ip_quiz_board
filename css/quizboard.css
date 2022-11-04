@@ -83,15 +83,19 @@
     text-decoration: underline;
     text-align: center;
   }
+    
   #h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
   }
   #p1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
+    font-size:medium;
   }
-  #p2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(250, 251, 253);text-align: center;
+  .form-check-input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
+    font-size:small;
   }
+ 
 .card{
   background: rgb(246, 247, 249);
 }
