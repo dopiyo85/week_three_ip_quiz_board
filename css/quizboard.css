@@ -72,9 +72,9 @@
     background-image: url('../images/background4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center
-    width: 1000px
-    height: 1000px
+    background-position: center center;
+    width: 1000px;
+    height: 1000px;
   
   }
   h2 {
@@ -88,6 +88,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
   }
   #p1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
+    font-size:medium;
+  }
+
+  #finalscore {
     font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(242, 242, 246);
     font-size:medium;
   }

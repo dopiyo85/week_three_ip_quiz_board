@@ -3,16 +3,21 @@ $(document).ready(function () {
     const submitAnswer = document.querySelector("#submit_ans");
     let marks = 0;
     let total = 0;
-    quizAnswers.forEach(function (jibu) {
-        if (parseInt(jibu.value) > 0) {
-            total += parseInt(jibu.value);
+    quizAnswers.forEach(function (correctans) {
+        if (parseInt(correctans.value) > 0) {
+            total += parseInt(correctans.value);
         }
         else {
             total = total;
         }
-        jibu.addEventListener("change", function (event) {
-            marks += parseInt(event.target.value);
-        });
+        // correctans.addEventListener("change", function (event) {
+        //     marks += parseInt(event.target.value);
+        // });
+        quizAnswers.forEach(function(correctans) {
+            if(correctans.checked){
+                marks += parseInt(correctans.value);
+            }
+        })
     });
     submitAnswer.addEventListener("click", function (event) {
         let score = (marks / total) * 100;
