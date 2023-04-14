@@ -2,15 +2,24 @@ $(document).ready(function () {
     const quizAnswers = document.querySelectorAll(".ouranswers");
     const submitAnswer = document.querySelector("#submit_ans");
     const finalAnsContainer = document.querySelector("#matokeo");
+       
     let marks = 0;
     let total = 0;
     quizAnswers.forEach(function (correctans) {
-        total += parseInt(correctans.value);
+        if (parseInt(correctans.value) > 0) {
+            total += parseInt(correctans.value);
+        }
+        else {
+            total = total;
+        }
+        correctans.addEventListener("change", function (event) {
+            marks += parseInt(event.target.value)
+        });
     });
-    submit_ans.addEventListener("click", function (e) {
-        quizAnswers.forEach(function (answer) {
-            if (answer.checked) {
-                score += parseInt(answer.value);
+    submitAnswer.addEventListener("click", function (e) {
+        quizAnswers.forEach(function (correctans) {
+            if (correctans.checked) {
+                marks += parseInt(correctans.value);
             }
         });
         let score = (marks / total) * 100;
@@ -19,18 +28,18 @@ $(document).ready(function () {
             rating += "You have scored: " + score + "%" + " :Excellent";
         }
         else if (score >= 50 && score < 80) {
-            rating +="You have scored: " + score + "%" + " :You can do better";
+            rating += "You have scored: " + score + "%" + " :You can do better";
         }
         else {
-            rating +="You have scored: " + score + "%" +  "\n You can do better, Please retake test.";
+            rating += "You have scored: " + score + "%" + "\n You can do better, Please retake test.";
         }
-        finalAnsContainer.innerHTML += rating;
-        
+        finalAnsContainer.textContent= rating;
     });
-    $("#submit_ans").click(function(){
+
+    $("#submit_ans").click(function () {
         $("#finalscore").removeClass("d-none");
     });
- 
+
     $("#submit_ans").click(function () {
         alert("Wait for your Score");
     });
@@ -41,7 +50,5 @@ $(document).ready(function () {
         $(this).mouseleave(function () {
             $("#jumboimage").show();
         })
-
     });
 });
-
